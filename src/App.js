@@ -7,7 +7,7 @@ import WeatherThree from './WeatherThree'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes, Route, Link, useParams
 } from "react-router-dom"
 
