@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 
 const WeatherDesc = ({desc}) => {
@@ -14,14 +13,20 @@ const WeatherDesc = ({desc}) => {
         if (desc === 51 || desc === 53 || desc === 55) {
             setDesc('Drizzle')
         }
-        if (desc === 51 || desc === 53 || desc === 55) {
+        if (desc === 56 || desc === 57) {
                 setDesc('Freezing drizzle')
         }
+        if (desc === 66 || desc === 67) {
+            setDesc('Freezing rain')
+    }
         if (desc === 0 || desc === 1) {
             setDesc('Clear sky')
         }
-        if (desc === 61 || desc === 63 || desc === 65 || desc === 66 || desc === 67 || desc === 80 || desc === 81 || desc === 82) {
+        if (desc === 61 || desc === 63 || desc === 65 || desc === 80 || desc === 81 || desc === 82) {
             setDesc('Rain')
+        }
+        if (desc === 95 || desc === 96 || desc === 99 ) {
+            setDesc('Thunderstorm')
         }
 
     },[desc])

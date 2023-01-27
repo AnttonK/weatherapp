@@ -1,9 +1,7 @@
-import React, { useState, useEffect}  from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react'
 import './App.css';
 import Weather from './Weather';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {
   HashRouter as Router,
@@ -17,24 +15,22 @@ const Home = () => {
     <h1>Weather app</h1> 
     <h3>Select city:</h3>
     <div className="buttons">
-    <Link to="/cities/helsinki">
-     <Button type="button">Helsinki</Button>
- </Link>
- <Link to="/cities/jyvaskyla">
-     <Button type="button">Jyväskylä</Button>
- </Link>
- <Link to="/cities/tampere">
-     <Button type="button">Tampere</Button>
- </Link>
- <Link to="/cities/turku">
-     <Button type="button">Turku</Button>
- </Link>
- </div>
+      <Link to="/cities/helsinki">
+        <Button type="button">Helsinki</Button>
+      </Link>
+      <Link to="/cities/jyvaskyla">
+        <Button type="button">Jyväskylä</Button>
+      </Link>
+      <Link to="/cities/tampere">
+        <Button type="button">Tampere</Button>
+      </Link>
+      <Link to="/cities/turku">
+        <Button type="button">Turku</Button>
+      </Link>
+    </div>
   </div>
   )
 }
-
-
 
 
 const App = () => {
@@ -45,6 +41,8 @@ const App = () => {
       <Route path="/" element ={<Home />}/>
       <Route path="/cities/:city" element={<Weather />} />  
      </Routes>
+     <div className="bottomBar">
+     </div>
     </Router>
     
   )
