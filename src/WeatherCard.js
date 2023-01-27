@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import WeatherDesc from "./WeatherDesc";
 import axios from "axios";
+import './App.css';
 import WeatherIcon from "./WeatherIcon"
 import Card from 'react-bootstrap/Card';
 
@@ -46,9 +47,11 @@ const WeatherCard = ({city,date}) => {
     return(
         <Card>
             <Card.Body>
+            <div>
             <WeatherIcon desc={data.daily ? data.daily.weathercode[date] : null}/>
+            </div>
             <WeatherDesc desc={data.daily ? data.daily.weathercode[date] : null}/>
-            {data.daily ? <p>Temperature: {data.daily.temperature_2m_max[date]} C°</p> : null}
+            {data.daily ? <p>Temperature: {Math.round(data.daily.temperature_2m_max[date])} °C</p> : null}
             </Card.Body>
         </Card> 
     )

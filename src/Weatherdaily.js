@@ -22,7 +22,6 @@ const Weatherdaily = () => {
 
 useEffect(() => {
 
-    console.log(city)
     if (city === "jyvaskyla") { 
         setLat(62.24)
         setLon(23.23)

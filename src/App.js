@@ -1,14 +1,13 @@
 import React, { useState, useEffect}  from 'react'
 import ReactDOM from 'react-dom/client'
-import axios from 'axios'
-import Cityview from './Cityview'
-import Weatherdaily from './Weatherdaily'
+import './App.css';
 import WeatherThree from './WeatherThree'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import {
   HashRouter as Router,
-  Routes, Route, Link, useParams
+  Routes, Route, Link
 } from "react-router-dom"
 
 const Home = () => {
@@ -17,6 +16,7 @@ const Home = () => {
   <div>
     <h1>Weather app</h1> 
     <h3>Select city:</h3>
+    <div className="buttons">
     <Link to="/cities/helsinki">
      <Button type="button">Helsinki</Button>
  </Link>
@@ -29,6 +29,7 @@ const Home = () => {
  <Link to="/cities/turku">
      <Button type="button">Turku</Button>
  </Link>
+ </div>
   </div>
   )
 }

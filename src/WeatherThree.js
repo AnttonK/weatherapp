@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import './App.css';
 import { Link, useParams } from "react-router-dom"
 import WeatherDesc from "./WeatherDesc";
 import Weatherdaily from "./Weatherdaily";
@@ -17,7 +18,6 @@ const WeatherThree = () => {
     const [cityName, setCityName] = useState('')
     const {city} = useParams();
     const [key, setKey] = useState('one');
-    console.log(city)
  
     const current = new Date();
     const date = `${current.getDate()}.${current.getMonth()+1}.`
@@ -60,20 +60,33 @@ useEffect(() => {
       className="mb-3"
     >
       <Tab eventKey="one" title="Today">
-      <WeatherCard city={city} date={0}/>
+        <div className="todayCard">
+            <p>{date}</p>
+            <WeatherCard city={city} date={0}/>
+        </div>
       </Tab>
       <Tab eventKey="two" title="Three days">
-       <p>{date}</p>
-      <WeatherCard city={city} date={0}/>
-      <p>{date2}</p>
-      <WeatherCard city={city} date={1}/>
-      <p>{date3}</p>
-      <WeatherCard city={city} date={2}/>
+        <div className="cards">
+        <div className="onecard">
+            <p>{date}</p>
+            <WeatherCard city={city} date={0}/>
+        </div>
+        <div className="onecard">
+            <p>{date2}</p>
+            <WeatherCard city={city} date={1}/>
+        </div>
+        <div className="onecard">
+            <p>{date3}</p>
+            <WeatherCard city={city} date={2}/>
+        </div>
+      </div>
       </Tab>
     </Tabs>
+    <div className="buttons">
     <Link to="/">
-                <Button type="button">go back</Button>
+                <Button className="backbutton" type="button">go back</Button>
         </Link>
+        </div>
     </div>
     )
 }

@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const WeatherDesc = ({desc}) => {
-    console.log(desc)
     const [description, setDesc] = useState('')
 
     useEffect(() => {

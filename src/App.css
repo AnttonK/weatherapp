@@ -1,21 +1,54 @@
-.App {
+
+Button {
+  margin: 0.5rem;
+  margin-top: 3rem;
+}
+
+.backbutton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.nav.nav-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.onecard {
+  margin: 0.3rem;
   text-align: center;
+  max-width: 15rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.weathIcon {
+.todayCard {
+  margin: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   align-items: center;
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -29,6 +62,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+h1,h3 {
+  text-align: center;
+  margin-top: 2rem;
 }
 
 @keyframes App-logo-spin {
