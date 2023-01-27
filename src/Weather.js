@@ -1,17 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import './App.css';
 import { Link, useParams } from "react-router-dom"
-import WeatherDesc from "./WeatherDesc";
-import Weatherdaily from "./Weatherdaily";
 import WeatherCard from "./WeatherCard";
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import { FaCloud, FaSun, FaSnowflake, FaCloudRain, FaCloudDrizzle} from "react-icons/fa";
-import Cityview from "./Cityview";
 
 
 const WeatherThree = () => {

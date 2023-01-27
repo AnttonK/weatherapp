@@ -1,7 +1,7 @@
 import React, { useState, useEffect}  from 'react'
 import ReactDOM from 'react-dom/client'
 import './App.css';
-import WeatherThree from './WeatherThree'
+import Weather from './Weather';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -43,8 +43,7 @@ const App = () => {
     <Router>
      <Routes>
       <Route path="/" element ={<Home />}/>
-      <Route path="/cities/:city" element={<WeatherThree />} /> 
-      <Route path="/citiesthree/:city" element={<WeatherThree />} /> 
+      <Route path="/cities/:city" element={<Weather />} />  
      </Routes>
     </Router>
     

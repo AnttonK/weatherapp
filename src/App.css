@@ -37,12 +37,14 @@ ul.nav.nav-tabs {
   margin: 0.3rem;
   text-align: center;
   max-width: 15rem;
+  min-width: 10rem;
   align-items: center;
   justify-content: center;
 }
 
 .todayCard {
   margin: 0.3rem;
+  min-width: 15rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -67,6 +69,10 @@ ul.nav.nav-tabs {
 h1,h3 {
   text-align: center;
   margin-top: 2rem;
+}
+
+body {
+  background-color: rgb(202, 230, 245);
 }
 
 @keyframes App-logo-spin {

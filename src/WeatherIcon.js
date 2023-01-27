@@ -1,12 +1,7 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
-import WeatherDesc from "./WeatherDesc";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
-import { FaCloud, FaSun, FaSnowflake, FaCloudRain, FaCloudDrizzle} from "react-icons/fa";
+import { FaCloud, FaSun, FaSnowflake, FaCloudRain} from "react-icons/fa";
 
 
 const WeatherIcon = ({desc}) => {
