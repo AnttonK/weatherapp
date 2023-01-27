@@ -45,7 +45,6 @@ const App = () => {
       <Route path="/cities/:city" element={<WeatherThree />} /> 
       <Route path="/citiesthree/:city" element={<WeatherThree />} /> 
      </Routes>
-     <div>hii se toimii</div>
     </Router>
     
   )
